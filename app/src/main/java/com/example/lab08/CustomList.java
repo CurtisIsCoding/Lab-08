@@ -24,4 +24,22 @@ public class CustomList {
         return cities.size();
     }
 
+    public void deleteCity(City target) {
+        // error if not input
+        if (target == null) {
+            throw new IllegalArgumentException("City is null");
+        }
+        // Loop to find matches
+        for (int i = 0; i < cities.size(); i++) {
+            City c = cities.get(i);
+            if (c.getCityName().equals(target.getCityName())
+                    && c.getProvinceName().equals(target.getProvinceName())) {
+                cities.remove(i); // removes the city
+                return;
+            }
+        }
+        // in case of no match
+        throw new IllegalArgumentException("City not found: " + target.getCityName() + ", " + target.getProvinceName());
+    }
+
 }
