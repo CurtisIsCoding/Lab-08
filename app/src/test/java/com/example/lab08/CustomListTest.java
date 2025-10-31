@@ -32,7 +32,7 @@ public class CustomListTest {
         list.addCity(new City("Edmonton", "AB"));
         assertEquals(2, list.countCities());
     }
-    /*
+
     @Test
     public void testDeleteCity_removesAndDecrements() {
         CustomList list = makeList();
@@ -49,6 +49,6 @@ public class CustomListTest {
         assertThrows(IllegalArgumentException.class, () ->
                 list.deleteCity(new City("AnotherCity", "AB"))
         );
-    }*/
+    }
 
 }
